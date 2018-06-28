@@ -96,7 +96,7 @@ module.exports = function (app) {
         var user = req.body;
         return userModel.updateUser(user)
             .then(function () {
-                
+                //req.session['currentUser'] = user;
                 res.json(user);
             });
     }
